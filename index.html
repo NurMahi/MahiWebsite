@@ -3,31 +3,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahi's Website</title>
+  <title>Mahi | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+
+    /* HERO SECTION */
+   .hero {
+  background: linear-gradient(135deg, #95cf7e, #09584e, #b5b5b5);
+  color: #fff;
+  padding: 120px 0 80px; /* top, sides, bottom */
+  text-align: center;
+}
+
+    /* PROFILE IMAGE */
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* CARD HOVER */
+    .card {
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="#">Mahi</a>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Mahi</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
     </div>
-  </nav>
-
-  <div class="container text-center mt-5">
-    <h1>Hello! I'm Mahi</h1>
-    <p>Welcome to my personal website.</p>
-    <img src="images/profile.jpg" class="img-fluid rounded-circle" alt="Mahi's photo" width="200">
   </div>
+</nav>
 
-  <div class="container mt-5">
-    <h2>About Me</h2>
-    <p>I am a student who loves building web projects. This is my first Bootstrap website!</p>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container">
+
+    <h1 class="display-3 fw-bold mb-3">Hi, I'm Mahi </h1>
+    <p class="lead mb-4">Aspiring Web Developer | Student</p>
+
+    <!-- IMAGE CENTERED -->
+    <div class="d-flex justify-content-center">
+      <img src="images/profile.jpg" class="profile-img shadow">
+    </div>
+
+    <div class="mt-4">
+      <a href="#projects" class="btn btn-light btn-lg">View My Work</a>
+    </div>
+
   </div>
+</section>
 
-  <footer class="bg-light text-center py-3 mt-5">
-    &copy; 2026 Mahi
-  </footer>
+<!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">About Me</h2>
+    <p class="lead">
+      I am a student who loves building modern and responsive websites.
+      This is my first Bootstrap project, and I'm excited to keep improving!
+    </p>
+  </div>
+</section>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
+<!-- PROJECTS -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">My Projects</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Portfolio Website</h5>
+            <p class="card-text">My personal website built using Bootstrap.</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">HTML Project</h5>
+            <p class="card-text">A simple static webpage using HTML & CSS.</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Coming Soon</h5>
+            <p class="card-text">More exciting projects are on the way!</p>
+            <a href="#" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <p>Email: mahimahi@my.unt.edu</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+  © 2026 Mahi | Built with Bootstrap
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
